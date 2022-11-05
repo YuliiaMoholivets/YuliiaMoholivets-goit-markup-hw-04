@@ -12,7 +12,8 @@
     --list-items-gap: 30px;
     --portfolio-cards-border-color: #eee;
     --bg-color-gray: #f5f4fa;
-    
+    --text-color-social: #afb1b8;
+    --bg-color-button-accent-secondary: #188ce8;
 }
 h1,
 h2,
@@ -120,6 +121,7 @@ button {
 .auth-nav{
     display:flex;
     
+    
 }
 .auth-nav .link{
     display: inline-block;
@@ -127,9 +129,26 @@ button {
         padding-bottom: 32px;
         text-decoration: none;
     color: var(---primary-text-color);
+    
+   
 }
 .auth-nav {
     margin-left: auto;
+    
+}
+.auth-nav .icon {
+    --color4: currentColor;
+
+    margin-right: 10px;
+    
+}
+
+.auth-nav .icon .icon-envelope {
+    vertical-align: -0.1em;
+}
+
+.auth-nav .icon .icon-smartphone {
+    vertical-align: -0.25em;
 }
 
 .logo {
@@ -179,6 +198,20 @@ button {
     display: flex;
     margin-left: calc(-1 * var(--list-items-gap));
    
+}
+.features-list .thumb {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    border-radius: 4px;
+    background-color: var(--bg-color-gray);
+    margin-bottom:30px ;
+}
+
+.features-list .icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
  .features-list .item {
@@ -261,12 +294,24 @@ margin-bottom: 10px;
     color:var(--primary-text-color);
     line-height: 1.71;
 }
+.section-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+
+    color: var(--title-text-color);
+}
 
 .slogan {
     background-color: var(--primary-brg-color);
     padding-top: 200px;
     padding-bottom: 200px;
     text-align: center;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/hero.jpg);
+    background-repeat: no-repeat;
+        background-position: center;
+        background-size: 1600px;
 }
 
 .slogan-title{
@@ -386,6 +431,21 @@ footer {
 }
 .footer-contacts  {
     margin-top: 20px;
+}
+.site-footer__nav-links {
+    width: 231px;
+}
+.site-footer__social-links {
+    padding-top: 12px;
+    margin-left: 70px;
+}
+.site-footer__social-list {
+    margin-top: 20px;
+}
+
+.site-footer__social-link {
+    color: var(--text-color-footer);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .footer-contacts .item:not(:first-child) {
