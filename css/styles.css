@@ -83,6 +83,7 @@ button {
 
 .site-nav .list {
     display: flex;
+    
 }
 .site-nav .item:not(:first-child),
 .auth-nav .item:not(:first-child) {
@@ -97,6 +98,7 @@ button {
     display: inline-block;
     padding-top: 32px;
     padding-bottom: 32px;
+    
 }
 
 .site-nav .link:hover,
@@ -127,41 +129,31 @@ button {
 .auth-nav .link:focus {
     color: var(--accent-color);
 }
-.auth-nav{
-    display:flex;
-    
-    
-    
-}
+
 .auth-nav .link{
-    display: inline-block;
+    display: flex;
         padding-top: 32px;
         padding-bottom: 32px;
         text-decoration: none;
     color: var(---primary-text-color);
-    
-    
-   
+       
+        align-items: center;
 }
 .auth-nav {
     display: inline-block;
     margin-left: auto;
     align-items: center;
-    
+  
 }
 .auth-nav .icon {
-    --color4: currentColor;
-
+    --color4: currentColor;    
     margin-right: 10px;
     
 }
-
- .icon .icon-envelope {
-    vertical-align: -0.1em;
-}
-
-.icon .icon-smartphone {
-    vertical-align: -0.25em;
+.icon {
+    display: inline-block; 
+    align-items: center;
+    justify-content: center;
 }
 
 .logo {
@@ -197,8 +189,7 @@ button {
 }
 .features-list {
     display: flex;
-    margin-left: calc(-1 * var(--list-items-gap));
-   
+    margin-left: calc(-1 * var(--list-items-gap));  
 }
 .features-list .thumb {
     padding-top: 25px;
@@ -208,19 +199,16 @@ button {
     background-color: var(--bg-color-gray);
     margin-bottom:30px ;
 }
-
-.features-list .icon {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
  .features-list .item {
     flex-basis: calc(100% / 4 - var(--list-items-gap));
     margin-left: var(--list-items-gap);
-   
 }
-
 
 .portfolio-cards {
     display: flex;
@@ -229,7 +217,8 @@ button {
 }
 
  .portfolio-cards .item {
-    flex-basis: calc(100% / 3 - var(--list-items-gap));     
+    flex-basis: calc(100% / 3 - var(--list-items-gap));
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
  }
 .portfolio-filter{
     margin-bottom: 50px;
@@ -246,33 +235,29 @@ button {
 
 .portfolio-cards .link {
     color:var(--primary-text-color);
-    text-decoration: none; 
-   
-   
+    text-decoration: none;      
 }
 
 .portfolio-cards .text{
     color: var(---primary-text-color);
     margin-top: 4px;
     font-size: 16px;
-    line-height: 1.88;
-         
+    line-height: 1.88;        
 }
+
 .portfolio-cards .heading-car {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-    color: var(--title-text-color);
-    
+    color: var(--title-text-color); 
 }
 
 .section-items {
     color: var(--title-text-color);
     font-weight: 500;
         font-size: 16px;
-        line-height:1.19;
-             
+        line-height:1.19;            
 }
  .section-item-one {
 color: var(--title-text-color);
@@ -281,12 +266,11 @@ font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.03em;
 margin-bottom: 10px;
-
  }
 .section-desc {
     color:var(--primary-text-color);
-        font-size: 16px;
-        line-height:1.19;     
+    font-size: 16px;
+    line-height:1.19;     
 }
 .section-text {
     color:var(--primary-text-color);
@@ -296,7 +280,6 @@ margin-bottom: 10px;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
-
     color: var(--title-text-color);
 }
 
@@ -361,7 +344,9 @@ color: var(--primary-bt-color);
 .button-work:hover,
 .button-work:focus {
     color: var(--primary-bt-color);
-        background-color: var(--accent-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
 }
 
 .button-secondary {
@@ -441,11 +426,14 @@ color: var(--accent-color);
     margin-left: var(--list-items-gap);
 
     background-color: var(--primary-bt-color);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+   
+}
+.team-cards .item:hover,
+.team-cards .item:focus {
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
-
 
 .team-cards .description {
     padding-top: 30px;
@@ -454,17 +442,19 @@ color: var(--accent-color);
     padding-right: 24px; 
 }
 .team-cards .section-desc{
-    margin-top: 10px;
-   
+    margin-top: 10px;  
 }
 
 .team-cards .social-links {
     margin-top: 16px;
-    justify-content: center;
-   
+    align-items: center;
+    display: flex;
+    justify-self: center;
 }
+
 .social-links {
     display: flex;
+    align-items: center;
 }
 
 .social-links__item:not(:last-child) {
@@ -472,14 +462,14 @@ color: var(--accent-color);
 }
 
 .social-links__link {
-    display: inline-block;
+    display: block;
     height: 44px;
     width: 44px;
     padding: 12px;
-
     border-radius: 50%;
-
     color: var(--text-color-social);
+    align-items: center;
+    justify-self: center;
 }
 
 .social-links__link:hover,
@@ -489,7 +479,10 @@ color: var(--accent-color);
 }
 .social-links__icon {
     --color1: currentColor;
+  
 }
+
+
 
 .clients .heading{
     color: var(--title-text-color);
@@ -497,23 +490,29 @@ color: var(--accent-color);
 
 .clients__list {
     display: flex;
+    justify-content: space-between;
     margin-top: 50px;
-    margin-left: calc(-1 * var(--list-items-gap));
+    
 }
 
 .clients__item {
     flex-basis: calc(100% / 3 - var(--list-items-gap));
-    margin-left: var(--list-items-gap);
+    margin-left: var(--list-items-gap);  
+   
+}
+.cclients__item:first-child {
+    margin-left: 0px;
 }
 
 .clients__link {
-    display: block;
-    padding-top: 15px;
-    padding-bottom: 15px;
-
+    display: flex;
+    align-items: center;
+    justify-items: center;
     color: var(--thumb-color);
     border: 1px solid var(--thumb-color);
     border-radius: 4px;
+    width: 175px;
+    height: 90px;
 }
 
 .clients__link:hover,
@@ -525,10 +524,7 @@ color: var(--accent-color);
 .clients__icon {
     --color1: currentColor;
 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+    }
 
 .site-footer {
     padding-top: 60px;
@@ -539,6 +535,7 @@ color: var(--accent-color);
 
 .site-footer__container {
     display: flex;
+    align-items: baseline;
 }
 
 .site-footer__nav-links {
@@ -550,7 +547,7 @@ color: var(--accent-color);
 }
 
 .site-footer__social-links {
-    padding-top: 12px;
+   
     margin-left: 70px;
 }
 
